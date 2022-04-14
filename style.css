@@ -1,0 +1,240 @@
+:root{
+    --gridpaper:url(loop_de_loop_234412.svg);
+    --pastc1:#e8dff5;
+    --pastc2:#fce1e4;
+    --pastc3:#fcf4dd;
+    --pastc4:#ddedea;
+    --pastc5:#daeaf6;
+    --tornygon: polygon(
+        1% 2%,
+        3.5% 0.1%,
+        8.9% 2.7%,
+        16.2% 1.2%,
+        19.7% 0.8%,
+        24.7% 2%,
+        31.2% 0%,
+        35.9% 2.3%,
+        40.6% 0.5%,
+        47.1% 1.8%,
+        49.9% 1%,
+        53.8% 2.5%,
+        62.2% 0.4%,
+        67.3% 1.2%,
+        70.3% 0.3%,
+        75.8% 1.4%,
+        78.5% 1.7%,
+        84% 2.6%,
+        91.1% 0.5%,
+        93.6% 2.4%,
+        97.3% 0.3%,
+        98.9% 6%,
+        98.1% 11.4%,
+        98.6% 15.5%,
+        97.3% 17.8%,
+        97.7% 27.4%,
+        98.3% 28.5%,
+        99.7% 34.1%,
+        98.8% 41.9%,
+        98.3% 45.7%,
+        98.4% 50.9%,
+        98.7% 57.4%,
+        99.6% 60.4%,
+        99.4% 66.6%,
+        99.2% 69.5%,
+        97.4% 77.1%,
+        98.1% 82.3%,
+        99.9% 83.5%,
+        98.2% 91.5%,
+        99.3% 95.3%,
+        98% 98.6%,
+        93.6% 97.4%,
+        90.3% 98.3%,
+        86.8% 98.3%,
+        78.6% 98.5%,
+        76.4% 99.2%,
+        69.7% 99.8%,
+        64.2% 99.3%,
+        61.8% 99.2%,
+        57.2% 98.1%,
+        48.7% 98.3%,
+        46.8% 99%,
+        39.6% 98.9%,
+        33.8% 97.3%,
+        28.2% 99.4%,
+        27% 98.3%,
+        22.1% 98.6%,
+        13.1% 97.1%,
+        8.7% 99.3%,
+        2.7% 97.4%,
+        2% 98.2%,
+        2.1% 94.3%,
+        0.7% 90.5%,
+        0.9% 86.3%,
+        2.2% 78.2%,
+        0.4% 76.7%,
+        1.2% 72.1%,
+        2% 64%,
+        1.4% 59.8%,
+        0.4% 57.3%,
+        0.3% 49.1%,
+        2.9% 44.7%,
+        1.9% 41.3%,
+        0.8% 35.7%,
+        2.9% 31.3%,
+        0.8% 24.9%,
+        2.7% 20.5%,
+        0.8% 17.4%,
+        2.5% 8.6%,
+        1.1% 5.5%
+    );
+}
+body{
+    background-image:var(--gridpaper) ;
+    background-size: 1500px;
+    display: flex;
+    font-family: 'Indie Flower', cursive;
+    color: rgb(27, 32, 84);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#sbcontainer{
+    z-index: 10;
+    transition: 0.6s;
+    position: fixed;
+    top: -240px;
+    left: -80px;
+      width: 205px;
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+}
+#sbcontainer:hover{
+    top: 0;
+    left: 0;
+}
+#sidebar{ 
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: block;
+    background-color: white;
+    background-image:var(--gridpaper);
+    background-size: 1000px;
+
+    width: 205px;
+    height: auto;
+    overflow: hidden;
+    
+    clip-path: var(--tornygon)
+
+}
+#sideitems{
+    padding: 10px;
+    font-size: 30px;
+}
+#sidelogo{
+    text-align: right;
+    font-size: 60px;
+}
+#maincontent{
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+    width:-webkit-fill-available;
+width:-moz-available;
+overflow: hidden;
+}
+#mchead{
+    clip-path: var(--tornygon);
+    background-image: var(--gridpaper);
+    background-size: 1100px;
+        background-color: var(--pastc4);
+        filter: var(--tornygon);
+    width: fit-content;
+    position: sticky;
+    text-align: center;
+    font-size:120px;
+    margin: auto;
+    padding-inline: 350px;
+}
+/*.contentrow:hover{
+  filter:  drop-shadow(1px 1px 2.5px rgba(0, 0, 0, 0.5));
+}*/
+.contentrow{  
+
+    display: grid;
+    grid-template:"a b" ;
+    height: 500px;
+    z-index: 1;
+}
+.contentcard{   
+    clip-path: var(--tornygon);
+
+    background-image: var(--gridpaper);
+    background-color: var(--pastc1);
+    background-size: 1250px;
+    filter: drop-shadow(1px px 2px rgba(0, 0, 0, 0.5));
+    z-index: 2;
+    position: relative;
+
+}
+
+.ccinfo{
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+    border-collapse: collapse;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: fit-content;
+    width: 30%;
+    bottom: 0;
+}
+
+.cctext{
+    height: -webkit-fill-available;
+    text-overflow: ellipsis;
+    padding: 7px;
+    font-size: 30px;
+    clip-path:var(--tornygon);
+background-image: var(--gridpaper);
+background-size: 1100px;
+background-color: var(--pastc3);
+}
+.ccdesc{
+    font-size: 50px;
+    padding: 3px;
+    clip-path: var(--tornygon);
+    background-image: var(--gridpaper);
+background-size: 1100px;
+    background-color: var(--pastc4);
+    width: fit-content;
+    position: relative;
+}
+#cci1, #cci3{
+    text-align: right;
+    right: 0;
+    
+    align-items: flex-end;
+}
+#contentcards{
+
+    z-index: 0;
+}
+.imgholder{
+    filter:drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5)); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ccimg{
+    height: 105%;
+    z-index: 0;
+    position: absolute;
+}
+
+#ccim1 {
+
+ }
+
+
+
